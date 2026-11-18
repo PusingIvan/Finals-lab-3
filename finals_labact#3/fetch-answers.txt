@@ -1,0 +1,15 @@
+1. XHR uses callbacks with verbose readyState/status handling, while Fetch uses
+ Promises with a cleaner, single-call syntax, and unlike XHR, Fetch does not 
+ reject on HTTP errors like 404 or 500.
+
+2. The Fetch API is more modern and readable because it is Promise-based 
+(working with .then()/.catch() or async/await) and uses a concise options object
+instead of XHR's separate open(), setRequestHeader(), and send() calls.
+
+3. The .then() method handles a resolved Promise and receives the response or 
+parsed data, while .catch() handles a rejected Promise such as a network failure 
+or a manually thrown error.
+
+4. Sending a POST request to the placeholder API fakes a creation by echoing 
+your data back with a new id (e.g., 101) and status 201, but nothing is actually 
+saved because JSONPlaceholder is for testing only.
